@@ -87,6 +87,7 @@ app.post("/signup", async function(req, res) {
 
 
   app.post("/forgot-password", authMiddleware, async function(req, res) {
+    console.log("Request Body:", req.body); 
     const { currentPassword, newPassword } = req.body;
 
     if (!currentPassword || !newPassword) {
